@@ -1,3 +1,5 @@
+# http.cat.dn42
+This is a fork of http.cat use at [https://http.cat.dn42](https://http.cat.dn42), issues / PR should send to upstream unless it is related to changes in this fork.
 # http.cat
 
 ![HTTP Cat picture](https://http.cat/204)
