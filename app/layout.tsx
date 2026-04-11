@@ -2,7 +2,6 @@ import { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 
 import './globals.css';
-import CarbonAd from '@/components/CarbonAd';
 
 export const metadata: Metadata = {
   icons: {
@@ -22,10 +21,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     title: 'HTTP Cats',
-    url: 'https://http.cat',
+    url: 'https://http.cat.dn42',
     images: [
       {
-        url: 'https://http.cat/100.jpg',
+        url: 'https://http.cat.dn42/100.jpg',
         alt: 'HTTP Cats',
       },
     ],
@@ -34,11 +33,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: 'https://http.cat',
+    site: 'https://http.cat.dn42',
     creator: '@rogeriopvl',
     title: 'HTTP Cats',
     description: 'API for HTTP Cats',
-    images: ['https://http.cat/100'],
+    images: ['https://http.cat.dn42/100'],
   },
 };
 
@@ -60,23 +59,11 @@ export default async function RootLayout({
           rel="search"
           type="application/opensearchdescription+xml"
           title="httpcat"
-          href="https://http.cat/opensearch.xml"
+          href="https://http.cat.dn42/opensearch.xml"
         />
       </head>
       <body>
-        <CarbonAd />
         <div className="p-4 sm:px-16 sm:py-4 lg:px-32 lg:py-4">{children}</div>
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-          window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-          ga('create', 'UA-27701865-1', 'auto');
-          ga('send', 'pageview');
-        `}
-        </Script>
-        <Script
-          src="https://www.google-analytics.com/analytics.js"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );

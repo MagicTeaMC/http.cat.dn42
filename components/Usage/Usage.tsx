@@ -14,7 +14,7 @@ const Usage = ({ t }: UsageProps) => {
   const [isValueCopied, setIsValueCopied] = useState(false);
   const [value, copy] = useCopyToClipboard();
 
-  const usageValue = `https://http.cat/[${t.USAGE_PARAM}]`;
+  const usageValue = `https://http.cat.dn42/[${t.USAGE_PARAM}]`;
 
   useEffect(() => {
     if (isValueCopied) {
